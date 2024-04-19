@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI.Convos.Dialogs.AddAssignmentDialog"
+             Title="AddAssignmentDialog"
+             NavigatedTo="OnArriving">
+    <VerticalStackLayout>
+        <Label 
+            Text="Add Assignment to Course"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label Text="Enter Assignment Name:"/>
+        <Entry Text="{Binding Name}"/>
+
+        <Label Text="Enter Assignment Description:"/>
+        <Entry Text="{Binding Description}"/>
+
+        <Label Text="Enter Total Available Points:"/>
+        <Entry Text="{Binding Points}"/>
+
+        <Label Text="Enter Due Date:"/>
+        <Entry Text="{Binding Date}"/>
+
+        <Button Text="Submit Assignment" Clicked="SubmitAssignmentClick" Margin="10"/>
+    </VerticalStackLayout>
+</ContentPage>

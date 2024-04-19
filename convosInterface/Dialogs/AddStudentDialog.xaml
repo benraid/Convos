@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI.Convos.Dialogs.AddStudentDialog"
+             Title="AddStudent"
+             NavigatedTo="ContentPage_NavigatedTo">
+                
+    <VerticalStackLayout>
+        <Label 
+            Text="Add New Student"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="10*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="ID" Grid.Column="0" Grid.Row="0"/>
+            <Entry Text="{Binding Id}" Grid.Column="1" Grid.Row="0"/>
+
+            <Label Text="Name" Grid.Column="0" Grid.Row="1"/>
+            <Entry Text="{Binding Name}" Grid.Column="1" Grid.Row="1"/>
+
+            <Label Text="Classification" Grid.Column="0" Grid.Row="2"/>
+            <StackLayout Grid.Column="1" Grid.Row="2">
+                <RadioButton x:Name="FreshmanRadioButton" Content="Freshman" CheckedChanged="OnClassificationChanged"/>
+                <RadioButton x:Name="SophomoreRadioButton" Content="Sophomore" CheckedChanged="OnClassificationChanged"/>
+                <RadioButton x:Name="JuniorRadioButton" Content="Junior" CheckedChanged="OnClassificationChanged"/>
+                <RadioButton x:Name="SeniorRadioButton" Content="Senior" CheckedChanged="OnClassificationChanged"/>
+            </StackLayout>
+        </Grid>
+
+        <Button
+        Text="Submit"
+        Clicked="SubmitClick"/>
+        <Button
+        Text="Cancel"
+        Clicked="CancelClick"/>
+    </VerticalStackLayout>
+</ContentPage>

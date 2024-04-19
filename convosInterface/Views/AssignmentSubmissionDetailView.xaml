@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI.Convos.Views.AssignmentSubmissionDetailView"
+             Title="AssignmentSubmissionDetailView"
+             NavigatedTo="OnArriving">
+    <VerticalStackLayout>
+        <Button
+            Text="&#x2190;"
+            FontFamily="Segoe UI Symbol" FontSize="16"
+            HorizontalOptions="Start" VerticalOptions="Start" Margin="10"
+            Clicked="BackClick"/>
+
+        <Label Text="Assignments:"/>
+        <ListView ItemsSource="{Binding SelectedCourse.Assignments}"
+                  SelectedItem="{Binding SelectedAssignment}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Spacing="200" Margin="20,0">
+                            <StackLayout>
+                                <Label Text="{Binding Name}" FontAttributes="Bold"/>
+                                <Label Text="{Binding Description}" FontSize="Small" TextColor="Gray"/>
+                            </StackLayout>
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Total Available Points: " FontSize="Small" TextColor="Gray"/>
+                                    <Label Text="{Binding TotalAvailablePoints}" FontSize="Small" TextColor="Gray"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Due Date: " FontSize="Small" TextColor="Gray"/>
+                                    <Label Text="{Binding DueDate}" FontSize="Small" TextColor="Gray"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+        <Label Text="Submissions for Selected Assignment:"/>
+        <ListView ItemsSource="{Binding SelectedAssignment.SubmittedAssignments}"
+                  SelectedItem="{Binding SelectedSubmission}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Spacing="200" Margin="20,0">
+                            <StackLayout>
+                                <Label Text="{Binding StudentID}" FontAttributes="Bold"/>
+                                <Label Text="{Binding StudentName}" FontSize="Small" TextColor="Gray"/>
+                            </StackLayout>
+                            <StackLayout>
+                                <Label Text="{Binding Title}" FontSize="Small" TextColor="Gray"/>
+                                <Label Text="{Binding Answer}" FontSize="Small" TextColor="Gray"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Text="Show Student Submissions" Clicked="ViewSubmissionsClick" Margin="100"/>
+
+    </VerticalStackLayout>
+</ContentPage>

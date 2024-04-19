@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI.Convos.Views.InstructorView"
+             Title="InstructorView"
+             NavigatedTo="ContentPage_NavigatedTo">
+    <VerticalStackLayout>
+        <Button
+            Text="&#x2190;"
+            FontFamily="Segoe UI Symbol" FontSize="16"
+            HorizontalOptions="Start" VerticalOptions="Start" Margin="10"
+            Clicked="BackClick"/>
+        <Label 
+            Text="Welcome Instructor!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <ListView
+            ItemsSource="{Binding Students}"
+            SelectedItem="{Binding SelectedStudent}"
+            ></ListView>
+        <Button Text="Add a Student" Clicked="AddStudentClick"/>
+        <Button Text="Update a Student" Clicked="UpdateStudentClick"/>
+        <Button Text="Remove a Student" Clicked="RemoveStudentClick"/>
+        <Button Text="Enroll Student to Course" Clicked="AddEnrollmentClick"/>
+        <Button Text="Unenroll Student from Course" Clicked="RemoveEnrollmentClick"/>
+
+        <ListView
+            ItemsSource="{Binding Courses}"
+            SelectedItem="{Binding SelectedCourse}"
+            ></ListView>
+        <Button Text="Add a Course" Clicked="AddCourseClick"/>
+        <Button Text="Add Module to a Course" Clicked="AddModuleClick"/>
+        <Button Text="Add Assignment to a Course" Clicked="AddAssignmentClick"/>
+        <Button Text="View All Assignments and Student Submissions for a Course" Clicked="ViewAssignmentsClick"/>
+    </VerticalStackLayout>
+</ContentPage>

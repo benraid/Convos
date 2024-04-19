@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MAUI.Convos.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MAUI.Convos"
+    xmlns:views="clr-namespace:MAUI.Convos.Views"
+    xmlns:dialogs="clr-namespace:MAUI.Convos.Dialogs"
+    Shell.FlyoutBehavior="Disabled"
+    Title="MAUI.Convos">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    <ShellContent
+        Title="Instructor"
+        ContentTemplate="{DataTemplate views:InstructorView}"
+        Route="Instructor" />
+    <ShellContent
+        Title="Student"
+        ContentTemplate="{DataTemplate views:StudentView}"
+        Route="Student" />
+    <ShellContent
+        Title="Student Detail View"
+        ContentTemplate="{DataTemplate views:StudentDetailView}"
+        Route="StudentDetail" />
+    <ShellContent
+        Title="Assignment Submission Detail View"
+        ContentTemplate="{DataTemplate views:AssignmentSubmissionDetailView}"
+        Route="AssignmentSubmissionDetail" />
+    <ShellContent
+        Title="Add Student"
+        ContentTemplate="{DataTemplate dialogs:AddStudentDialog}"
+        Route="AddStudent"/>
+    <ShellContent
+        Title="Update Student"
+        ContentTemplate="{DataTemplate dialogs:UpdateStudentDialog}"
+        Route="UpdateStudent"/>
+    <ShellContent
+        Title="Add Course"
+        ContentTemplate="{DataTemplate dialogs:AddCourseDialog}"
+        Route="AddCourse"/>
+    <ShellContent
+        Title="Add Module"
+        ContentTemplate="{DataTemplate dialogs:AddModuleDialog}"
+        Route="AddModuleDialog"/>
+    <ShellContent
+        Title="Submit Assignment"
+        ContentTemplate="{DataTemplate dialogs:SubmitAssignmentDialog}"
+        Route="SubmitAssignmentDialog"/>
+    <ShellContent
+        Title="Add Assignment"
+        ContentTemplate="{DataTemplate dialogs:AddAssignmentDialog}"
+        Route="AddAssignmentDialog"/>
+</Shell>
