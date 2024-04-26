@@ -12,18 +12,40 @@
             <Label
                 Text="Convos Learning Management System"
                 Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
-            <Button
-                Text="Student View"
-                Clicked="StudentClick"
-                ></Button>
-            <Button
-                Text="Instructor View"
-                Clicked="InstructorClick"
-                ></Button>
+                SemanticProperties.HeadingLevel="Level1"
+                FontFamily="Roboto"
+                TextColor="#800080" />
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Frame
+                    WidthRequest="150"
+                    BackgroundColor="#4CAF50"
+                    CornerRadius="30"
+                    HasShadow="True"
+                    Padding="0">
+                    <Button
+                        Text="Student View"
+                        Clicked="StudentClick"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        FontFamily="Roboto" />
+                </Frame>
+                <Frame
+                    WidthRequest="150"
+                    BackgroundColor="#2196F3"
+                    CornerRadius="30"
+                    HasShadow="True"
+                    Padding="0">
+                    <Button
+                        Text="Instructor View"
+                        Clicked="InstructorClick"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        FontFamily="Roboto" />
+                </Frame>
+            </HorizontalStackLayout>
             
         </VerticalStackLayout>
     </ScrollView>
 
 </ContentPage>
-
