@@ -8,15 +8,15 @@ using APP.Convos.Helpers;
 
 namespace LearningApp
 {
-    internal class Program 
+    internal class Program
     {
-        static void Main(string[] args) 
+        static void Main(string[] args)
         {
             var studentHelper = new StudentHelper();
             var courseHelper = new CourseHelper();
 
             int option = 0;
-            while (option != 3) 
+            while (option != 3)
             {
                 HomeMenu(); // Display home menu
                 option = int.Parse(Console.ReadLine() ?? "0"); // Input option
