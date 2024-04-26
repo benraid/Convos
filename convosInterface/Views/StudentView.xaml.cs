@@ -10,9 +10,9 @@ namespace MAUI.Convos.Views;
 public partial class StudentView : ContentPage
 {
     public StudentView()
-	{
+    {
         InitializeComponent();
-	}
+    }
 
     private void BackClick(object sender, EventArgs e)
     {
@@ -26,9 +26,10 @@ public partial class StudentView : ContentPage
 
     private void StudentInfoClick(object sender, EventArgs e)
     {
-        int studentId = (BindingContext as StudentViewModel).SelectedStudent.Id;
-        if (studentId > 0)
+        var studentViewModel = BindingContext as StudentViewModel;
+        if (studentViewModel != null && studentViewModel.SelectedStudent != null)
         {
+            int studentId = studentViewModel.SelectedStudent.Id;
             var studentDetailView = new StudentDetailView(studentId);
             Shell.Current.Navigation.PushAsync(studentDetailView);
         }
