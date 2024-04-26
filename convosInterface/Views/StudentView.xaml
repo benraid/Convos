@@ -4,29 +4,45 @@
              x:Class="MAUI.Convos.Views.StudentView"
              Title="StudentView"
              NavigatedTo="OnArriving">
-    <VerticalStackLayout>
+    <Grid Padding="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
         <Button
+            Grid.Row="0"
             Text="&#x2190;"
             FontFamily="Segoe UI Symbol" FontSize="16"
             HorizontalOptions="Start" VerticalOptions="Start" Margin="10"
-            Clicked="BackClick"/>
-        <Label 
-            Text="Welcome Student!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            BackgroundColor="Green" Clicked="BackClick"/>
 
-        <Label Text="Enter ID:"/>
-        <Entry Text="{Binding Query}"/>
+        <ScrollView Grid.Row="1">
+            <StackLayout>
+                <Label 
+                    Text="Welcome Student!"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    FontSize="24" />
 
-        <Button Text="Search Students" Clicked="SearchClick"/>
+                <Label Text="Enter ID:" FontSize="18"/>
+                <Entry Text="{Binding Query}" Margin="0,0,0,20"/>
 
-        <Label Text="Search Results"/>
-        <ListView
-            ItemsSource="{Binding SearchResults}"
-            SelectedItem="{Binding SelectedStudent}"
-            Margin="0,0,40,50">
-        </ListView>
+                <Button Text="Search Students" Clicked="SearchClick" 
+                        BackgroundColor="Green" TextColor="White" 
+                        CornerRadius="20" Padding="20" Margin="0,10"/>
 
-        <Button Text="Student Info" Clicked="StudentInfoClick"/>
-    </VerticalStackLayout>
+                <Label Text="Search Results" FontSize="18"/>
+                <ListView
+                    ItemsSource="{Binding SearchResults}"
+                    SelectedItem="{Binding SelectedStudent}"
+                    Margin="0,0,40,50">
+                </ListView>
+
+                <Button Text="Student Info" Clicked="StudentInfoClick" 
+                        BackgroundColor="Green" TextColor="White" 
+                        CornerRadius="20" Padding="20" Margin="0,10"/>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
 </ContentPage>
