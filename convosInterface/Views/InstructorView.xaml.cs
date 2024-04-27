@@ -41,6 +41,11 @@ public partial class InstructorView : ContentPage
         Shell.Current.GoToAsync("//AddCourse");
     }
 
+    private void RemoveCourseClick(object sender, EventArgs e)
+    {
+        (BindingContext as InstructorViewModel)?.RemoveCourse();
+    }
+
     private void AddModuleClick(object sender, EventArgs e)
     {
         var courseCode = (BindingContext as InstructorViewModel)?.SelectedCourse.Code;

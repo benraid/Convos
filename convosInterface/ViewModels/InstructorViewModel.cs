@@ -84,4 +84,10 @@ internal class InstructorViewModel : INotifyPropertyChanged
             Refresh();
         }
     }
+
+    public void RemoveCourse()
+    {
+        courseService.RemoveCourse(SelectedCourse);
+        Refresh();
+    }
 }

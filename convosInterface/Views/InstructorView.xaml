@@ -59,9 +59,13 @@
             BackgroundColor="Blue" TextColor="White" 
             CornerRadius="20" Padding="20" Margin="0,10"/>
 
+        <Button Text="Remove a Course" Clicked="RemoveCourseClick" 
+            BackgroundColor="Blue" TextColor="White" 
+            CornerRadius="20" Padding="20" Margin="0,10"/>    
+
         <Button Text="Add Module to a Course" Clicked="AddModuleClick" 
             BackgroundColor="Blue" TextColor="White" 
-            CornerRadius="20" Padding="20" Margin="0,10"/>
+            CornerRadius="20" Padding="20" Margin="0,10"/>       
 
         <Button Text="Add Assignment to a Course" Clicked="AddAssignmentClick" 
             BackgroundColor="Blue" TextColor="White" 
