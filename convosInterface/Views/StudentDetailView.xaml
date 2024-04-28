@@ -9,7 +9,7 @@
             Text="&#x2190;"
             FontFamily="Segoe UI Symbol" FontSize="16"
             HorizontalOptions="Start" VerticalOptions="Start" Margin="10"
-            Clicked="BackClick"/>
+            Clicked="BackClick" BackgroundColor="Green"/>
 
         <Label Text="Name:"/>
         <Label Text="{Binding Name}" Margin="20, 5"/>
@@ -22,7 +22,7 @@
 
         <ListView ItemsSource="{Binding Courses}" SelectedItem="{Binding SelectedCourse}" Margin="10"/>
 
-        <Button Text="Course Info" Clicked="CourseInfoClick" Margin="10"/>
+        <Button Text="Course Info" Clicked="CourseInfoClick" Margin="10" BackgroundColor="Green" TextColor="White"/>
 
         <Label Text="Selected Course:"/>
         <Label Text="{Binding SelectedCourse.Name}" Margin="10"/>
@@ -66,6 +66,6 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <Button Text="Submit Assignment" Clicked="SubmitAssignmentClick" Margin="10"/>
+        <Button Text="Submit Assignment" Clicked="SubmitAssignmentClick" BackgroundColor="Green" TextColor="White" Margin="10"/>
     </VerticalStackLayout>
 </ContentPage>

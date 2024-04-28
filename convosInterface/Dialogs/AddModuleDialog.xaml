@@ -16,6 +16,6 @@
         <Label Text="Enter Module Description:"/>
         <Entry Text="{Binding Description}"/>
 
-        <Button Text="Submit Module" Clicked="SubmitModuleClick" Margin="10"/>
+        <Button Text="Submit Module" BackgroundColor="Blue" TextColor="White" Clicked="SubmitModuleClick" Margin="10"/>
     </VerticalStackLayout>
 </ContentPage>

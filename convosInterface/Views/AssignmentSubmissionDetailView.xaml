@@ -9,7 +9,7 @@
             Text="&#x2190;"
             FontFamily="Segoe UI Symbol" FontSize="16"
             HorizontalOptions="Start" VerticalOptions="Start" Margin="10"
-            Clicked="BackClick"/>
+            Clicked="BackClick" BackgroundColor="Blue" TextColor="White"/>
 
         <Label Text="Assignments:"/>
         <ListView ItemsSource="{Binding SelectedCourse.Assignments}"
@@ -60,10 +60,9 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <Button Text="Show Student Submissions" Clicked="ViewSubmissionsClick" Margin="100"/>
+        <Button Text="Show Student Submissions" BackgroundColor="Blue" TextColor="White" Clicked="ViewSubmissionsClick"/>
 
         <Entry Text="{Binding GradeInput}" Placeholder="Enter grade here"/>
-        <Button Text="Submit Grade" Clicked="SubmitGradeClick" Margin="100"/>
-        <Entry Text="{Binding Query}" Margin="0,0,0,20"/>
+        <Button Text="Submit Grade" BackgroundColor="Blue" TextColor="White" Clicked="SubmitGradeClick"/>
     </VerticalStackLayout>
 </ContentPage>

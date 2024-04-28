@@ -22,6 +22,6 @@
         <Label Text="Enter Due Date:"/>
         <Entry Text="{Binding Date}"/>
 
-        <Button Text="Submit Assignment" Clicked="SubmitAssignmentClick" Margin="10"/>
+        <Button Text="Submit Assignment" Clicked="SubmitAssignmentClick" Margin="10" BackgroundColor="Blue" TextColor="White"/>
     </VerticalStackLayout>
 </ContentPage>

@@ -29,18 +29,14 @@
 
             <Label Text="Classification" Grid.Column="0" Grid.Row="2"/>
             <StackLayout Grid.Column="1" Grid.Row="2">
-                <RadioButton x:Name="FreshmanRadioButton" Content="Freshman" CheckedChanged="OnClassificationChanged"/>
-                <RadioButton x:Name="SophomoreRadioButton" Content="Sophomore" CheckedChanged="OnClassificationChanged"/>
-                <RadioButton x:Name="JuniorRadioButton" Content="Junior" CheckedChanged="OnClassificationChanged"/>
-                <RadioButton x:Name="SeniorRadioButton" Content="Senior" CheckedChanged="OnClassificationChanged"/>
+                <RadioButton x:Name="FreshmanRadioButton" Content="Freshman" TextColor="White" CheckedChanged="OnClassificationChanged"/>
+                <RadioButton x:Name="SophomoreRadioButton" Content="Sophomore" TextColor="White" CheckedChanged="OnClassificationChanged"/>
+                <RadioButton x:Name="JuniorRadioButton" Content="Junior" TextColor="White" CheckedChanged="OnClassificationChanged"/>
+                <RadioButton x:Name="SeniorRadioButton" Content="Senior" TextColor="White" CheckedChanged="OnClassificationChanged"/>
             </StackLayout>
         </Grid>
 
-        <Button
-        Text="Submit"
-        Clicked="SubmitClick"/>
-        <Button
-        Text="Cancel"
-        Clicked="CancelClick"/>
+        <Button Text="Submit" BackgroundColor="Blue" TextColor="White" Clicked="SubmitClick"/>
+        <Button Text="Cancel" BackgroundColor="Blue" TextColor="White" Clicked="CancelClick"/>
     </VerticalStackLayout>
 </ContentPage>

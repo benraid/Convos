@@ -16,6 +16,6 @@
         <Label Text="Enter assignment answer:"/>
         <Entry Text="{Binding Answer}"/>
 
-        <Button Text="Submit Assignment" Clicked="SubmitAssignmentClick" Margin="10"/>
+        <Button Text="Submit Assignment" Clicked="SubmitAssignmentClick" BackgroundColor="Green" TextColor="White" Margin="10"/>
     </VerticalStackLayout>
 </ContentPage>

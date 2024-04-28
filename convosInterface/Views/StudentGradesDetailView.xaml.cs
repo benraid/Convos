@@ -12,5 +12,10 @@ namespace MAUI.Convos.Views
             InitializeComponent();
             BindingContext = new StudentGradesDetailViewModel(selectedStudent);
         }
+
+        public void RemoveGradeClick(object sender, EventArgs e)
+        {
+            (BindingContext as StudentGradesDetailViewModel)?.RemoveGrade();
+        }
     }
 }
