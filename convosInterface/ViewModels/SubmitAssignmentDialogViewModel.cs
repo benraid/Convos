@@ -22,7 +22,7 @@ namespace MAUI.Convos.ViewModels
         public void SubmitAssignment()
         {
             AssignmentSubmission assignmentSubmission = new AssignmentSubmission();
-            assignmentSubmission.StudentID = StudentId;
+            assignmentSubmission.StudentId = StudentId;
             assignmentSubmission.Title = Title;
             assignmentSubmission.Answer = Answer;
             assignmentSubmission.StudentName = (StudentService.Current.FindPerson(StudentId)).Name;

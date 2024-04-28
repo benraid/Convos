@@ -28,7 +28,7 @@ namespace Library.Convos.Services
                     _instance = new StudentService();
                 }
                 return _instance;
-            } 
+            }
         }
 
         public void AddStudent(Person student)
@@ -62,7 +62,7 @@ namespace Library.Convos.Services
             return findStudents;
         }
 
-        public List<Person> Students 
+        public List<Person> Students
         {
             get { return systemPersons; } // no set so we don't allow modifications to System Persons
         }
@@ -70,6 +70,16 @@ namespace Library.Convos.Services
         public IEnumerable<Person> SearchStudents(string query) // IEnumerable to prevent a deep copy (you can choose in application of what copy you want)
         {
             return Students.Where(s => s.Name.ToUpper().Contains(query.ToUpper()));
+        }
+
+        public void submitGrade(string? name, int grade, int id)
+        {
+            var student = FindPerson(id);
+            if (student != null)
+            {
+                if (name == null) name = string.Empty;
+                student.Grades.Add(name, grade);
+            }
         }
     }
 }

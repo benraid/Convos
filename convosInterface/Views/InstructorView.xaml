@@ -50,6 +50,10 @@
             BackgroundColor="Blue" TextColor="White" 
             CornerRadius="20" Padding="20" Margin="0,10"/>
 
+        <Button Text="View Student Grades" Clicked="ViewGradesClick"
+            BackgroundColor="Blue" TextColor="White" 
+            CornerRadius="20" Padding="20" Margin="0,10"/>    
+
         <ListView
             ItemsSource="{Binding Courses}"
             SelectedItem="{Binding SelectedCourse}">

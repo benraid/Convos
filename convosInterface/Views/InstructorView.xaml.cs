@@ -85,4 +85,14 @@ public partial class InstructorView : ContentPage
             Shell.Current.Navigation.PushAsync(assignmentSubmissionDetailView);
         }
     }
+
+    private void ViewGradesClick(object sender, EventArgs e)
+    {
+        var selectedStudent = (BindingContext as InstructorViewModel)?.SelectedStudent;
+        if (selectedStudent != null && selectedStudent.Id > 0)
+        {
+            var studentGradesDetailView = new StudentGradesDetailView(selectedStudent);
+            Shell.Current.Navigation.PushAsync(studentGradesDetailView);
+        }
+    }
 }

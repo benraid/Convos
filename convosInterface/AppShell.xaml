@@ -30,6 +30,10 @@
         ContentTemplate="{DataTemplate views:AssignmentSubmissionDetailView}"
         Route="AssignmentSubmissionDetail" />
     <ShellContent
+        Title="Student Grades Detail View"
+        ContentTemplate="{DataTemplate views:StudentGradesDetailView}"
+        Route="StudentGradesDetailView"/>    
+    <ShellContent
         Title="Add Student"
         ContentTemplate="{DataTemplate dialogs:AddStudentDialog}"
         Route="AddStudent"/>

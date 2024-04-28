@@ -27,4 +27,9 @@ public partial class AssignmentSubmissionDetailView : ContentPage
     {
         BindingContext = new AssignmentSubmissionDetailViewModel(SelectedCourse);
     }
+
+    private void SubmitGradeClick(object sender, EventArgs e)
+    {
+        (BindingContext as AssignmentSubmissionDetailViewModel)?.SubmitGrade();
+    }
 }
